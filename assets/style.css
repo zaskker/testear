@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    color: white;
+}
+
+:root {
+    --yellow: #ffc200;
+    --black: #131415;
+    --grey: #2d3640;
+}
+
+.section-container {
+    background-color: var(--black)
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 70px 0px;
+    width: 95%;
+    max-width: 1300px;
+}
+
+button {
+    background-color: var(--yellow);
+    border: 0px solid black;
+    outline: none;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+button:hover {
+    background-color: #c79900;
+    transition: all 0.4s linear;
+}
+
+
+
+.section-tittle {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.section-p{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.section-p-small {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+/* HEADER */
+
+.header-container {
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0px 50px;
+    position: sticky;
+    top: 0;
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 80%;
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list {
+    gap: 50px;
+}
+
+.navbar i {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    
+}
+
+#toggle-menu {
+    display: none;
+}
+
+
+.navbar a {
+    color: white;
+    font-size: 22px;
+}
+
+.navbar-list li:last-child > a {
+    border: 1px solid white;
+    font-size: 14px;
+    padding: 8px 40px;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+.navbar-list li:last-child > a:hover {
+    background-color: white;
+    color: var(--grey);
+    transition: all 0.3s linear;
+    font-weight: 700;
+}
+
+
+@media (max-width:992px){
+    .header{
+        padding: 0px 50px 0px 10px;
+    }
+    .navbar i {
+        display: block;
+    }
+    .navbar-list {
+        position: absolute;
+        background-color: var(--black);
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        display: none;
+        /* Display None */
+        z-index: 9999;
+    }
+
+    #toggle-menu:checked + .navbar-list {
+        display: flex;
+
+    }
+}
+
+/* Hero */
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 70px 50px;
+
+}
+.description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.text-container {
+    max-width: max(40%, 300px);
+}
+
+.text-container h1 {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.text-container p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.hero-img {
+    background-image: url(/assets/img/cliente.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 250px;
+    width: 30px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .hero-img {
+        display: none;
+    }
+
+    .description-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+#about-us {
+    gap: 15%;
+    flex-wrap: wrap ;
+}
+
+.about-img {
+    background-image: url(/assets/img/about.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 320px;
+    width: 320px;
+    border-radius: 5px;
+    
+    
+}
+
+.about-content {
+    height: 320px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.adress {
+    font-weight: 700;
+}
+
+
+
+
+
+
+
